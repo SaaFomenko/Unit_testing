@@ -1,25 +1,26 @@
 #include <iostream>
 #include "two_link_list.h"
+#include "print_list.h"
 
-
-void print_list(List* list)
-{
-	std::cout << "Создан список по адресу: " << list << std::endl;
-	std::cout << "Размер списка: " << list->Size() << std::endl;
-}
 
 int main()
 {
 	List* list1 = new List();
+	const int numbers[] = { 23, 5, 90, 100, 111, -1, -2, 3 };
+	int size = sizeof(numbers) / sizeof(numbers[0]);
 
-	if (list1 != nullptr)
+	list1->PushFront(numbers[0]);
+
+	int max_list = numbers[0];
+	int min_list = numbers[0];
+	
+	try
 	{
-		print_list(list1);
-
+	  print_list(list1);
 	}
-	else
+	catch (const std::exception& ex)
 	{
-		std::cout << "Список не создан, проверьте код класса List" << std::endl;
+		std::cout << ex.what() << std::endl;
 	
 		return 1;
 	}
