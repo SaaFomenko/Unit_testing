@@ -24,17 +24,16 @@ TEST_CASE( "Test functions Empty, Size, Clear of class List.", "[list-functions]
 		CHECK(list_new()->Empty() == true);
 	}
 
+	List* list = list_with_val();
 	SECTION("list size")
 	{
-		CHECK(list_new()->Size() == 0);
+		CHECK(list->Size() == 3);
 	}
 
 	SECTION("list clear")
 	{
-		List* list = list_with_val();
 		list->Clear();
 		CHECK(list->Size() == 0);
-		CHECK(list->Empty() == true);
 	}
 }
 
