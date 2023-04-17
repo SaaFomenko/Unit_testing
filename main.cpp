@@ -1,6 +1,6 @@
 #include <iostream>
-#include "two_link_list.h"
-#include "print_list.h"
+#include "lib/two_link_list.h"
+#include "lib/print_list.h"
 
 
 int main()

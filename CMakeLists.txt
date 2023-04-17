@@ -6,7 +6,7 @@ project(two_link_list)
 set(CMAKE_CXX_STANDARD 11)
 
 file(GLOB
-	lib_source "*.cpp")
+	lib_source "lib/*.cpp")
 
 set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
 
